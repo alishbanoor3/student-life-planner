@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Study Planner</h1>
+    </header>
+
+    <section class="full-width-quote">
+        <h2>Motivational Quote</h2>
+        <blockquote id="motivational-quote"></blockquote>
+        <button id="new-quote">New Quote</button>
+    </section>
+
+    <div class="main-container">
+        <div id="calendar-section">
+            <section>
+                <h2>Weekly Study Calendar</h2>
+                <div id="calendar"></div>
+            </section>
+        </div>
+
+        <div id="right-panel">
+            <section>
+                <h2>Add Task</h2>
+                <div id="task-input">
+                    <input type="text" id="new-task" placeholder="Type your task here..." />
+                    <input type="date" id="task-date" />
+                    <select id="task-type">
+                        <option value="Task">Task</option>
+                        <option value="Assignment">Assignment</option>
+                        <option value="Quiz">Quiz</option>
+                    </select>
+                    <button id="add-task">Add Task</button>
+                </div>
+            </section>
+
+            <section>
+                <h2>Study Timer</h2>
+                <div id="timer-display">00:00:00</div>
+                <button id="start-timer">Start</button>
+                <button id="stop-timer" disabled>Stop</button>
+                <button id="reset-timer" disabled>Reset</button>
+            </section>
+
+            <section>
+                <h2>Assignments & Quizzes</h2>
+                <ul id="assignments-list"></ul>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

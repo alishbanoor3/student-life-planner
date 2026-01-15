@@ -1,0 +1,268 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #00a385;
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(155, 89, 182, 0.4);
+}
+
+header h1 {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.full-width-quote {
+    margin: 0 20px 20px;
+    text-align: center;
+}
+
+.main-container {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px 20px;
+}
+
+#calendar-section {
+    flex: 0 0 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+#right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+#calendar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.day {
+    border: 2px solid #00a385;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f7fff4;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(155, 89, 182, 0.15);
+    position: relative;
+}
+
+.day h3 {
+    font-size: 1.2em;
+    margin-bottom: 12px;
+    color: #00493A;
+}
+
+.sticker {
+    position: absolute;
+    font-size: 1.5em;
+    top: 8px;
+    right: 10px;
+    pointer-events: none;
+}
+
+.day ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Task styling */
+.day ul li {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 8px 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.day ul li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.day ul li label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.day ul li input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #27ae60;
+    cursor: pointer;
+}
+
+.remove-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}
+
+.day ul li.completed label {
+    text-decoration: line-through;
+    color: #555;
+}
+
+#task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+#new-task,
+#task-date,
+#task-type {
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+}
+
+#timer-display {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #00493A;
+}
+
+button {
+    background-color: #00a385;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    margin: 0 8px 8px 0;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+button:hover:not(:disabled) {
+    background-color: #00493A;
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+blockquote {
+    font-style: italic;
+    color: #00493A;
+    border-left: 6px solid #00a385;
+    border-right: 6px solid #00a385;
+    padding-left: 15px;
+    margin: 15px 0;
+    background: #ecfee5;
+    border-radius: 8px;
+    font-size: 1.1em;
+}
+
+/* Assignments & Quizzes styling */
+#assignments-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+#assignments-list li {
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#assignments-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Color coding */
+#assignments-list li.assignment {
+    background: #d4f7dc;
+    border-left: 6px solid #27ae60;
+}
+
+#assignments-list li.quiz {
+    background: #e8d4f7;
+    border-left: 6px solid #8e44ad;
+}
+
+#assignments-list li.completed {
+    opacity: 0.7;
+}
+
+.assignment-type {
+    font-weight: bold;
+    font-size: 1.05em;
+}
+
+.assignment-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.assignment-details button {
+    padding: 5px 10px;
+    font-size: 0.85em;
+}
+
+.assignment-details label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
